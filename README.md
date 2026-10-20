@@ -7,9 +7,9 @@ Two kinds of noise need two different filters.This project tests that on signals
 | Experiment | Result |
 |---|---|
 | Gaussian noise, running mean | Best window k = 86 cuts RMSE from 1.01 to 0.10 (+20.4 dB SNR). Larger windows flatten peaks and the error rises again. |
-| Spike noise, mean filter | RMSE 19.8 → 6.5. The spikes are smeared, not removed. |
-| Spike noise, median despeckle | RMSE 19.8 → 0.011. Only flagged outliers are replaced; all other samples are untouched. |
-| EKG recording | Median step fixes 5 dropout samples (RMSE 123.8 → 100.9); a light running mean (k = 5) brings it to 40.5 (+9.7 dB SNR). The filter lowers the sharp R-peaks slightly, which is the cost of averaging. |
+| Spike noise, mean filter | RMSE 19.8 → 6.5. The spikes are smeared not removed. |
+| Spike noise, median despeckle | RMSE 19.8 → 0.011. Only flagged outliers are replaced and all other samples are untouched. |
+| EKG recording | Median step fixes 5 dropout samples (RMSE 123.8 → 100.9), a light running mean (k = 5) brings it to 40.5 (+9.7 dB SNR).The filter lowers the sharp R-peaks slightly which is the cost of averaging. |
 
 See [`denoising.ipynb`](denoising.ipynb) for the plots and the full walkthrough.
 
