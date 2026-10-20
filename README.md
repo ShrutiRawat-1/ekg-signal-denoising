@@ -1,6 +1,6 @@
 # Signal Denoising: Mean vs Median Filters
 
-Two kinds of noise need two different filters. This project tests that on signals where the clean version is known and scores every result with RMSE and SNR improvement.
+Two kinds of noise need two different filters.This project tests that on signals where the clean version is known and scores every result with RMSE and SNR improvement.
 
 ## Results
 
@@ -22,10 +22,10 @@ denoising.ipynb   the experiments
 data/             EKG_signals.csv
 ```
 
-## Design notes
+## Notes
 
 - The mean filter uses a cumulative sum and the median filter uses sliding windows.
 - Input is validated (empty, NaN/inf, non-1-D, invalid window size).
-- Edges: the mean filter shrinks its window; the median filter repeats the edge sample.
-- `despeckle` replaces only points past a threshold, so clean samples are never altered.
+- Edges: the mean filter shrinks its window and the median filter repeats the edge sample.
+- despeckle replaces only points past a threshold .So clean samples are never altered.
 
